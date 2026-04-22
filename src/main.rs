@@ -119,6 +119,7 @@ fn main() {
             println!("\nYou got it!\nThe word of the day was {}\n", word_solution);
             return;
         } else {
+            println!("\n{} attempts left!\n", 5-attempts);
             continue;
         }
     }
@@ -130,7 +131,7 @@ fn read_input(word_length: usize) -> String {
     let mut input: String = String::new();
 
     loop {
-        println!("\nEnter a new word (type 'exit()' to close the game):");
+        println!("\nEnter a new word (or type 'exit()' to close the game):");
 
         input.clear(); // clean user input every time so the inputs don't stack and I just get the last string that was entered
 
